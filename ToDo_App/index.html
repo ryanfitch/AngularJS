@@ -16,7 +16,7 @@
 <body ng-controller="TodoCtrl">
 
   <div class='container'>
-    
+
       <h1 class='list-group-item title'>Coding Punch-Out List:</h1>
 
       <!-- List of todos -->
@@ -28,9 +28,9 @@
           <a href="" ng-click="removeTodo($index)"><span class='glyphicon glyphicon-remove-circle'></span></a>
       </div>
       <!-- Preview as you type -->
-      <div class='list-group-item'>
+      <div class='list-group-item' ng-show="todoText">
         <input type='checkbox' disabled='true'>
-        <input type='text' disabled='true'>
+        <input type='text' disabled='true' class="todo" placeholder="{{todoText}}">
       </div>
 
       <!-- Add todo form -->
