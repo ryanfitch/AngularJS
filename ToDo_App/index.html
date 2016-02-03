@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app='todoapp'>
+<head>
+  <meta name ="description" content="Angular Todo List" />
+  <meta charset="utf-8" />
+  <title>To Do App</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script type="text/javascript" src="script.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src='https://cdn.firebase.com/v0/firebase.js'></script>
+<script src='https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js'></script>
+</head>
+<body ng-controller="TodoCtrl">
+
+  <!-- List of todos -->
+  <div ng-repeat="todo in todos">
+      <input type="checkbox" ng-model="todo.done"/>
+      <input type="text" ng-model="todo.text"/>
+      <a href="" ng-click="move($index, 'up')">Up</a>
+      <a href="" ng-click="move($index, 'down')">Down</a>
+      <a href="" ng-click="removeTodo($index)">Remove</a>
+  </div>
+
+  <!-- Add todo form -->
+  <form ng-submit="addTodo()">
+    <input type = "text" ng-model="todoText"/>
+    <input type="submit" />
+  </form>
+  
+</body>
+</html>
