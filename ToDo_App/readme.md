@@ -1,6 +1,6 @@
 Coding Punch-Out List App
 ======================
-AngularJS Mini Project (January 2015)
+AngularJS Mini Project (January 2016)
 
 Coded with AngularJS, JavaScript, Firebase DB, Bootstrap & HTML/CSS.
 
