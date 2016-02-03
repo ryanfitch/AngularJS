@@ -10,12 +10,14 @@
 <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 <script src='https://cdn.firebase.com/v0/firebase.js'></script>
 <script src='https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js'></script>
+<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="style.css">
 </head>
 <body ng-controller="TodoCtrl">
 
   <div class='container'>
-      <h4 class='list-group-item title'>Coding Todos</h4>
+    
+      <h1 class='list-group-item title'>Coding Punch-Out List:</h1>
 
       <!-- List of todos -->
       <div ng-repeat="todo in todos" class='list-group-item'>
@@ -24,6 +26,11 @@
           <a href="" ng-click="move($index, 'up')"><span class='glyphicon glyphicon-arrow-up'></span></a>
           <a href="" ng-click="move($index, 'down')"><span class='glyphicon glyphicon-arrow-down'></span></a>
           <a href="" ng-click="removeTodo($index)"><span class='glyphicon glyphicon-remove-circle'></span></a>
+      </div>
+      <!-- Preview as you type -->
+      <div class='list-group-item'>
+        <input type='checkbox' disabled='true'>
+        <input type='text' disabled='true'>
       </div>
 
       <!-- Add todo form -->

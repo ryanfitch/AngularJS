@@ -1,11 +1,27 @@
+body {
+    font-family: 'VT323', serif;
+    background-color: black;
+    background-image: url("punchout.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.list-group-item {
+    font-size: 18px;
+}
+
 .todo {
     border: none;
 }
 
 .container {
-    width: 200px;
+    margin-left: 10%;
+    margin-top: 20%;
+    width: 400px;
 }
 
 .title {
-    background: red;
+    background: #f5f5f5;
+    font-size: 30px;
+    font-weight: bold; 
 }
